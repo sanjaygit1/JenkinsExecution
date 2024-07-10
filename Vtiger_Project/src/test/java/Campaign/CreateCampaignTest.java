@@ -60,8 +60,6 @@ public class CreateCampaignTest extends BaseClass {
       
   Assert.assertTrue(actData.contains(campaginName));
   
-  System.out.println("hi");
-  System.out.println("bye");
  // Assert.assertTrue(actData.contains(campaginName),campaginName+"campaign name is not verified");
   
 //  SoftAssert soft = new SoftAssert();

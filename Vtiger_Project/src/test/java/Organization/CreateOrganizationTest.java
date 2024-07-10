@@ -48,6 +48,8 @@ public class CreateOrganizationTest extends BaseClass{
 //  Assert.fail();
  orgPage.clickOnSaveButton();
   Thread.sleep(2000);
+  
+  System.out.println("Gud mrng");
 
 		//First pull 
   //second push
