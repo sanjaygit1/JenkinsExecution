@@ -50,6 +50,7 @@ public class CreateOrganizationTest extends BaseClass{
   Thread.sleep(2000);
   
  System.out.println("org executed");
+ System.out.println("pass");
 
 		//First pull 
   //second push
