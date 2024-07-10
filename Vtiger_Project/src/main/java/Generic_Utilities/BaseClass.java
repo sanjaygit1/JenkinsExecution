@@ -44,6 +44,8 @@ public class BaseClass {
 	@BeforeClass(groups = { "smokeTest", "regressionTest" })
 	public void bc() throws Throwable {
 		String BROWSER = flib.getKeyAndValueData("browser");
+		//String BROWSER = System.getProperty("browser");
+		//System.out.println(BROWSER);
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -62,6 +64,8 @@ public class BaseClass {
 
 	@BeforeMethod(groups = { "smokeTest", "regressionTest" })
 	public void bm() throws Throwable {
+		//String URL = System.getProperty("url");
+		//System.out.println(URL);
 		String URL = flib.getKeyAndValueData("url");
 		String USERNAME = flib.getKeyAndValueData("username");
 		String PASSWORD = flib.getKeyAndValueData("password");
