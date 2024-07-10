@@ -49,7 +49,7 @@ public class CreateOrganizationTest extends BaseClass{
  orgPage.clickOnSaveButton();
   Thread.sleep(2000);
   
-  System.out.println("Gud mrng");
+ System.out.println("org executed");
 
 		//First pull 
   //second push
