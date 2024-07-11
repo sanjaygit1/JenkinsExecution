@@ -43,9 +43,12 @@ public class BaseClass {
 	// @Parameters("BROWSER")
 	@BeforeClass(groups = { "smokeTest", "regressionTest" })
 	public void bc() throws Throwable {
+	
+		//reading browser value from Jenkins
+	//	String BROWSER = System.getProperty("browser");
+	//	System.out.println(BROWSER);
+		
 		String BROWSER = flib.getKeyAndValueData("browser");
-		//String BROWSER = System.getProperty("browser");
-		//System.out.println(BROWSER);
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -64,12 +67,17 @@ public class BaseClass {
 
 	@BeforeMethod(groups = { "smokeTest", "regressionTest" })
 	public void bm() throws Throwable {
-		//String URL = System.getProperty("url");
-		//System.out.println(URL);
+//		
 		String URL = flib.getKeyAndValueData("url");
-		String USERNAME = flib.getKeyAndValueData("username");
-		String PASSWORD = flib.getKeyAndValueData("password");
+   	String USERNAME = flib.getKeyAndValueData("username");
+      String PASSWORD = flib.getKeyAndValueData("password");
 
+		//reading parameters from Jenkins
+//		String URL = System.getProperty("url");
+//		String USERNAME = System.getProperty("username");
+//		String PASSWORD = System.getProperty("password");
+		
+		
 		wlib.maximizeWindow(driver);
 		wlib.waitForElementToLoad(driver);
 
